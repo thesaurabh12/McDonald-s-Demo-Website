@@ -1,0 +1,269 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    background-color: rgb rgb(230, 224, 224);
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.newlogo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo {
+    height: 60px;
+    object-fit: contain;
+    width: 700px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: red;
+}
+
+.navBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.navBar a:hover {
+    color: #ffbc0d;
+}
+
+.orderButton {
+    background-color: yellow;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.orderButton:hover {
+    background-color: #f9a602;
+}
+
+/* Featured sections layout (image left, text right) */
+.div1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.main-images {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.text-container {
+    width: 55%;
+    color: #000;
+}
+
+.text-container h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.text-container p, .text-container ol {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+
+.text-container ol {
+    list-style: decimal inside;
+    font-weight: bold;
+}
+
+.text-container .orderButton {
+    background-color: #FFC72C;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.text-container .orderButton:hover {
+    background-color: #e6b500;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .div1 {
+        flex-direction: column;
+        max-width: 90%;
+        padding: 15px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .main-images, .text-container {
+        width: 100%;
+    }
+
+    .text-container .orderButton {
+        align-self: center;
+    }
+}
+
+/* Mega menu styling */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    padding: 20px;
+    width: 600px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    z-index: 1000;
+}
+
+.dropdown:hover .mega-menu {
+    display: grid;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.menu-item p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Footer area styling */
+.div-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    padding: 30px 10px;
+}
+
+.div-main > div {
+    flex: 1 1 200px;
+    padding: 10px;
+}
+
+.div-main h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #db0007;
+}
+
+.div-main ul {
+    list-style-type: none;
+}
+
+.div-main li {
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-div h3, .footer-div h4 {
+    margin-bottom: 10px;
+}
+
+.footer-div ul {
+    list-style: inside;
+}
+
+.footer-div a {
+    color: yellowgreen;
+    text-decoration: none;
+}
+
+.footer-div a:hover {
+    text-decoration: underline;
+}
